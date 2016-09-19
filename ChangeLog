@@ -1,6 +1,17 @@
-Changes in version 0.0.6 - UNRELEASED:
+Changes in version 0.0.7 - UNRELEASED:
+ - Support configuring the obfs4 IAT parameter as the sole
+   ServerTransportOption on bridges, and correctly checkpoint the argument
+   to the state file.
+ - Correctly use the derived epoch hour when generating the server obfs4
+   ntor handshake response to be more tollerant of clock skew.
+
+Changes in version 0.0.6 - 2016-01-25:
  - Delay transport factory initialization till after logging has been
    initialized.
+ - Add a meek client implementation (WARNING: Does not support using a
+   helper to normalize TLS signatures).  The brave people that want to use
+   it can do so as the "meek_lite" transport, with identical bridge lines
+   to the real meek-client.
 
 Changes in version 0.0.5 - 2015-04-15:
  - Go vet/fmt fixes, and misc. code cleanups.  Patches by mvdan.
